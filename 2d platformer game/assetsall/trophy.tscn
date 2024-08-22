@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1e1m2p163hdt"]
+
+[ext_resource type="Script" path="res://scenes/mc/tolvl2.gd" id="1_7bp1t"]
+[ext_resource type="Texture2D" uid="uid://dbhb5u5vv14wi" path="res://assetsall/End (Idle).png" id="1_n4wcn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4nwj"]
+size = Vector2(128, 134)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_7bp1t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999996, 7.62939e-06)
+scale = Vector2(2.85156, 3.07813)
+texture = ExtResource("1_n4wcn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, 32)
+shape = SubResource("RectangleShape2D_k4nwj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

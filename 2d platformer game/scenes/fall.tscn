@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bujhadt25a22q"]
+
+[ext_resource type="Script" path="res://scenes/mc/falllvl2.gd" id="1_h7pwf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_payew"]
+
+[node name="fall" type="Area2D"]
+position = Vector2(2719, 1354)
+script = ExtResource("1_h7pwf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("WorldBoundaryShape2D_payew")

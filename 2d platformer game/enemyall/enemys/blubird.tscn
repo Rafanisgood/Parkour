@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=3 uid="uid://bymrm2tyhddv3"]
+
+[ext_resource type="Texture2D" uid="uid://rugqi6xj7prt" path="res://enemyall/BlueBird/Flying (32x32).png" id="1_g3b0c"]
+[ext_resource type="Script" path="res://enemyall/enemys/blubird.gd" id="1_jk710"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ths3"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cva8"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01vs6"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d14v4"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb071"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m4r4"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmatp"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q14ye"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcmng"]
+atlas = ExtResource("1_g3b0c")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xg8il"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ths3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cva8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01vs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d14v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb071")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m4r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmatp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q14ye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcmng")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_118j7"]
+size = Vector2(75, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwepn"]
+size = Vector2(79, 57)
+
+[node name="blubird" type="RigidBody2D"]
+script = ExtResource("1_jk710")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5.5, -3)
+scale = Vector2(2.46875, 2.125)
+sprite_frames = SubResource("SpriteFrames_xg8il")
+autoplay = "default"
+frame_progress = 0.0786514
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, -1.5)
+shape = SubResource("RectangleShape2D_118j7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6.5, -2.5)
+shape = SubResource("RectangleShape2D_mwepn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
