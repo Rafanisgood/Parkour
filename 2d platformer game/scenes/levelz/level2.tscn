@@ -610,20 +610,7 @@ sources/0 = SubResource("TileSetAtlasSource_lg5tt")
 
 [node name="Game objects" type="Node" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Game objects"]
-motion_mirroring = Vector2(2560, 2560)
-
-[node name="Sprite2D" type="Sprite2D" parent="Game objects/ParallaxLayer"]
-texture_repeat = 2
-position = Vector2(-69, -35)
-scale = Vector2(1.02695, 1.01836)
-texture = ExtResource("1_clhf3")
-centered = false
-region_enabled = true
-region_rect = Rect2(2560, 2048, 2560, 2560)
-
 [node name="TextureRect" type="TextureRect" parent="Game objects"]
-visible = false
 texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.036
