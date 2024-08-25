@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://x3pduxm4e8w0"]
+[gd_scene load_steps=18 format=3 uid="uid://x3pduxm4e8w0"]
 
 [ext_resource type="Texture2D" uid="uid://daxon4ly8r8dr" path="res://bg/Brown.png" id="1_ndmjf"]
 [ext_resource type="Texture2D" uid="uid://dpedn0xgs37gq" path="res://terraria/Terrain (16x16).png" id="2_5wm0b"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scenes/levelz/pause menulvl1.gd" id="9_p4sv3"]
 [ext_resource type="PackedScene" uid="uid://bymrm2tyhddv3" path="res://enemyall/enemys/blubird.tscn" id="10_pq7fg"]
 [ext_resource type="PackedScene" uid="uid://dybygnwlvio4p" path="res://enemyall/enemys/duckius.tscn" id="12_htj4h"]
+[ext_resource type="PackedScene" uid="uid://djb3yl4ec3bkf" path="res://audio_stream_player_2d.tscn" id="14_p7wmm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lg5tt"]
 texture = ExtResource("2_5wm0b")
@@ -822,6 +823,8 @@ position = Vector2(1233, 533)
 
 [node name="RigidBody2D" parent="enemys" instance=ExtResource("12_htj4h")]
 position = Vector2(2849, 313)
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("14_p7wmm")]
 
 [connection signal="body_entered" from="Game objects/falling player" to="Game objects/falling player" method="_on_body_entered"]
 [connection signal="pressed" from="Game objects/pause menu/panel/buttons of pause menu/resume" to="Game objects/pause menu" method="_on_resume_pressed"]
