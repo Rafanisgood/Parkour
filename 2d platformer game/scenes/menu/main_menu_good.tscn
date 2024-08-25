@@ -1,4 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvqcawj4p0vv6"]
+[gd_scene load_steps=4 format=3 uid="uid://cvqcawj4p0vv6"]
+
+[ext_resource type="Texture2D" uid="uid://b3nj2v7345ltj" path="res://scenes/menu/Screenshot 2024-08-23 220004.png" id="1_vytnq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cad6s"]
+texture = ExtResource("1_vytnq")
+modulate_color = Color(0.176419, 0.176419, 0.176419, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnrvh"]
 bg_color = Color(1, 1, 1, 1)
@@ -17,6 +23,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cad6s")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -55,3 +70,18 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_nnrvh")
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.5
+offset_top = 47.0
+offset_right = 236.5
+offset_bottom = 184.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "PARKOUR"
+horizontal_alignment = 1
+vertical_alignment = 1
