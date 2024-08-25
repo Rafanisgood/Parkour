@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://game managing/game_manager.gd" id="4_r2dls"]
 [ext_resource type="PackedScene" uid="uid://bf60i2b8de234" path="res://assetsall/collectable.tscn" id="5_3awp6"]
 [ext_resource type="PackedScene" uid="uid://c1e1m2p163hdt" path="res://assetsall/trophy.tscn" id="6_ssps6"]
-[ext_resource type="PackedScene" uid="uid://dkxoqaghq3xkw" path="res://scenes/menu/main_menu.tscn" id="6_ynl8p"]
+[ext_resource type="PackedScene" uid="uid://cvqcawj4p0vv6" path="res://scenes/menu/main_menu_good.tscn" id="6_y6jmh"]
 [ext_resource type="PackedScene" uid="uid://bujhadt25a22q" path="res://scenes/fall.tscn" id="7_2hkgk"]
 [ext_resource type="PackedScene" uid="uid://dplkmvdvonmy0" path="res://enemyall/enemys/trunk.tscn" id="8_8tmei"]
 [ext_resource type="PackedScene" uid="uid://brjj2oy212oe2" path="res://enemyall/enemys/plant.tscn" id="9_sv6u2"]
@@ -649,7 +649,7 @@ hearts = [NodePath("../../UI/hearts/VBoxContainer/heart"), NodePath("../../UI/he
 [node name="Trophy" parent="Game objects" instance=ExtResource("6_ssps6")]
 texture_filter = 1
 position = Vector2(3482, 333)
-target_level = ExtResource("6_ynl8p")
+target_level = ExtResource("6_y6jmh")
 
 [node name="fall" parent="Game objects" instance=ExtResource("7_2hkgk")]
 position = Vector2(3495, 1357)

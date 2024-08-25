@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://djb3yl4ec3bkf"]
+[gd_scene load_steps=2 format=3 uid="uid://cfvwsp68uujin"]
 
 [ext_resource type="AudioStream" uid="uid://d1jar2wsw5x0o" path="res://assetsall/568699_-Hexagon-Force-.mp3" id="1_y7w1u"]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_y7w1u")
 autoplay = true
