@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvqcawj4p0vv6"]
+[gd_scene load_steps=10 format=3 uid="uid://cvqcawj4p0vv6"]
 
 [ext_resource type="Script" path="res://scenes/menu/main_menu_good.gd" id="1_1hq6g"]
 [ext_resource type="Texture2D" uid="uid://b3nj2v7345ltj" path="res://scenes/menu/Screenshot 2024-08-23 220004.png" id="1_vytnq"]
 [ext_resource type="FontFile" uid="uid://y53mgv0hgiy6" path="res://assetsall/GrapeSoda.ttf" id="2_m64vy"]
+[ext_resource type="AudioStream" uid="uid://d1jar2wsw5x0o" path="res://assetsall/568699_-Hexagon-Force-.mp3" id="4_8pcn1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cad6s"]
 texture = ExtResource("1_vytnq")
@@ -131,6 +132,10 @@ theme_override_font_sizes/font_size = 160
 text = "PARKOUR"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8pcn1")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

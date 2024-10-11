@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkxoqaghq3xkw"]
+[gd_scene load_steps=10 format=3 uid="uid://dkxoqaghq3xkw"]
 
 [ext_resource type="Script" path="res://game managing/scene_transition.gd" id="1_ulr0x"]
 [ext_resource type="Texture2D" uid="uid://c17bhhwvosr1o" path="res://assetsall/Screenshot 2024-08-25 212659.png" id="2_kfom2"]
 [ext_resource type="FontFile" uid="uid://y53mgv0hgiy6" path="res://assetsall/GrapeSoda.ttf" id="3_d8txj"]
+[ext_resource type="AudioStream" uid="uid://dhqtq4plohg4v" path="res://assetsall/467339_At_the_Speed_of_Light_FINA.mp3" id="4_x0q1i"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ofqlh"]
 texture = ExtResource("2_kfom2")
@@ -126,7 +127,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_85slo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0ov7n")
 text = "LEVEL 3"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_x0q1i")
+autoplay = true
+
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
